@@ -1,0 +1,21 @@
+Deploy locally:
+
+1-run anvil
+2-copy one of private keys in the .env file like below without double quote and 0x:
+
+PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+run the following command:
+
+forge script script/Contract.s.sol:ContractScript --fork-url http://localhost:8545 --private-key $PRIVATE_KEY  --broadcast
+
+Deploy on testnet:
+
+1-run anvil
+2-copy private key from MetaMask by clicking on "Connection Details" and copy it to .env file like below without double quote and 0x:
+
+PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+run the following command:
+
+forge script script/Contract.s.sol:ContractScript --rpc-url $ARBITRUM_TESTNET_RPC --private-key ${PRIVATE_KEY} --broadcast
